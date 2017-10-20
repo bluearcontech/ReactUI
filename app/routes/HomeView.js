@@ -46,11 +46,7 @@ class Home extends Component {
         // Get selected row when click row
         console.log("click method")
         var id = event.currentTarget.attributes['data-id'].value
-        if (this.state.selectedId == id) {
-            this.setState({
-                selectedId: ''
-            })
-        } else {
+        if (this.state.selectedId != id) {
             this.setState({
                 selectedId: id
             })

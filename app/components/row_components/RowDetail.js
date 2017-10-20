@@ -3,6 +3,9 @@ import React, { Component } from 'react'
 import ItemProcessFrame from '../detail_components/ItemProcessFrame'
 import buildImage from '../../public/build.png'
 import firewallImage from '../../public/firewall.png'
+import firewallAccepted from '../../public/firewall_accepted.png'
+import firewallRejected from '../../public/firewall_rejected.png'
+import firewallRunning from '../../public/firewall_running.png'
 import ResultView from '../detail_components/ResultView'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import AnimateHeight from 'react-animate-height';
@@ -28,6 +31,7 @@ class RowDetail extends Component {
         if (detail == true) {
             detailView = ""
         }
+        let fireallImage = '../../public/firewall.png'
         return (
             <ReactCSSTransitionGroup transitionName="example"
                 transitionAppear={true} transitionAppearTimeout={500}
@@ -51,7 +55,7 @@ class RowDetail extends Component {
                                 <label className={["cell", labelColor].join(' ')}>{this.props.item.time}</label>
                                 <label className={["cell", labelColor].join(' ')}>{this.props.item.state}</label>
 
-                                <label className={["cell-state", itemBack.metricBack].join(' ')}></label>
+                                <a><label className={["cell-state", itemBack.metricBack].join(' ')}></label></a>
                                 <label className={["cell-state", itemBack.buildBack].join(' ')}></label>
                                 <label className={["cell-state", itemBack.utBack].join(' ')}></label>
                                 <label className={["cell-state", itemBack.ftBack].join(' ')}></label>

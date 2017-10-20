@@ -56,12 +56,12 @@
         "unittest": {
             "status": "accepted",
             "testpass": 73,
-            "codecover": 76
+            "codecover": 84
         },
         "functionaltest": {
             "status": "accepted",
             "testpass": 68,
-            "codecover": 23
+            "codecover": 32
         }
     },
     {
@@ -83,12 +83,12 @@
         "unittest": {
             "status": "success",
             "testpass": 73,
-            "codecover": 76
+            "codecover": 59
         },
         "functionaltest": {
             "status": "success",
             "testpass": 68,
-            "codecover": 23
+            "codecover": 39
         }
     },
     {
@@ -110,12 +110,12 @@
         "unittest": {
             "status": "pending",
             "testpass": 73,
-            "codecover": 76
+            "codecover": 67
         },
         "functionaltest": {
             "status": "pending",
             "testpass": 68,
-            "codecover": 23
+            "codecover": 38
         }
     },
     {
@@ -137,12 +137,12 @@
         "unittest": {
             "status": "accepted",
             "testpass": 86,
-            "codecover": 76
+            "codecover": 89
         },
         "functionaltest": {
             "status": "accepted",
             "testpass": 93,
-            "codecover": 23
+            "codecover": 34
         }
     }
 ]

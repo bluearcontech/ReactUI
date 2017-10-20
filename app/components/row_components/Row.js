@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import RowDetail from './RowDetail'
 import '../../scss/style.scss'
-import buildImage from '../../public/build.png'
-import firewallImage from '../../public/firewall.png'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import AnimateHeight from 'react-animate-height';
 class Row extends Component {
@@ -19,7 +17,6 @@ class Row extends Component {
         const { selected, uniqueKey } = this.props
 
         let layout = null
-        let metricsImagePath, buildImagePath, utImagePath, ftImagePath
         let metricsFrameStyle, buildFrameStyle, utFrameStyle, ftFrameStyle
         let metricBack, buildBack, utBack, ftBack
         let metricLabelCol, buildLabelCol, utlabelCol, ftLabelCol
