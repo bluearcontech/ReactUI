@@ -1,0 +1,334 @@
+.container {
+    padding-top: 100px;
+}
+
+.running {
+    border: 3px solid;
+    border-color: cornflowerblue;
+    background: linear-gradient(to left, rgba(200, 169, 226, 0), rgba(0, 0, 100, 0.1));
+}
+
+.pending {
+    border: 3px solid;
+    border-color: lightgrey;
+    background-color: whitesmoke;
+}
+
+.rejected {
+    border: 3px solid;
+    border-color: red;
+    background: linear-gradient(to left, rgba(236, 182, 182, 0), rgba(255, 0, 0, 0.1));
+}
+
+.completed {
+    border: 3px solid;
+    border-color: mediumseagreen;
+    background: linear-gradient(to left, rgba(190, 249, 188, 0), rgba(190, 249, 188, 0.2));
+}
+
+.accepted {
+    border: 3px solid;
+    border-color: mediumseagreen;
+    background: linear-gradient(to left, rgba(190, 249, 188, 0), rgba(190, 249, 188, 0.2));
+}
+
+.border-running {
+    border: 3px solid;
+    border-color: cornflowerblue;
+}
+
+.border-pending {
+    border: 3px solid;
+    border-color: lightgrey;
+}
+
+.border-rejected {
+    border: 3px solid;
+    border-color: red;
+}
+
+.border-completed {
+    border: 3px solid;
+    border-color: mediumseagreen;
+}
+
+.row-collapse {
+    margin: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.row-expand {
+    margin: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    height: 290px;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    width: 10%;
+    margin: 0px 9px 0px 8px;
+}
+
+.header-type {
+    width: 15%;
+}
+
+.header-time {
+    display: inline-block;
+    text-align: center;
+    width: 15%;
+    margin: 0px 7px 0px 7px;
+}
+
+.header-owner {
+    text-align: center;
+    width: 10%;
+    margin: 0px 8px 0px 7px;
+    padding-left: 30px
+}
+
+.cell {
+    text-align: center;
+    display: inline-block;
+    width: 13%;
+    line-height: 50px;
+}
+
+.cell-state {
+    display: inline-block;
+    width: 5%;
+    background-color: red;
+    border: 2px solid;
+    border-color: lightgrey;
+    margin: 5px 33px 0px 33px;
+    padding: 0px 10px 0px 10px;
+    height: 40px;
+}
+
+.cell-name {
+    display: inline-block;
+    width: 110px;
+    line-height: 50px;
+}
+
+.cell-type {
+    background-image: '../public/firewall.png';
+    float: left;
+    width: 5%;
+    height: 50px;
+}
+
+.cell-type img {
+    margin: 10px 0px 10px 10px;
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+    margin: 2px 5px 0px 5px;
+    float: left;
+}
+
+.react {
+    height: 100px;
+    width: 100px;
+}
+
+.item-id {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.item-owner {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.item-type {
+    margin-top: 7px;
+    text-align: left
+}
+
+.status-frame {
+    margin: 25px 15px 25px 25px;
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+}
+
+.result-frame {
+    margin: 25px 25px 25px 25px;
+    width: 170px;
+    height: 170px;
+    display: inline-block;
+    position: absolute
+}
+
+.frame-rejected {
+    border: 3px solid;
+    border-color: red;
+    background: linear-gradient(to left, rgba(236, 182, 182, 0), rgba(255, 0, 0, 0.1));
+}
+
+.color-grey {
+    background-color: lightgrey
+}
+
+.color-blue {
+    background-color: darkgreen
+}
+
+.color-red {
+    background-color: red
+}
+
+.color-green {
+    background: linear-gradient(to left, rgba(236, 182, 182, 0), rgba(0, 0, 255, 0.6));
+}
+
+.label-color-grey {
+    margin: 5px 0px 0px 5px;
+    color: lightgrey
+}
+
+.label-color-blue {
+    margin: 5px 0px 0px 5px;
+    color: darkgreen
+}
+
+.label-color-red {
+    margin: 5px 0px 0px 5px;
+    color: red
+}
+
+.label-color-green {
+    margin: 5px 0px 0px 5px;
+    color: green
+}
+
+.arrow-item {
+    display: inline;
+    position: relative;
+    margin: 0px 20px 10px 20px;
+}
+
+.float-frame {
+    float: left
+}
+
+.arrow-item span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.arrow-top {
+    margin-bottom: 10px
+}
+
+.pie-chart {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 10px 15px 0px 10px;
+}
+
+.chart-frame {
+    float: left;
+    width: 100%
+}
+
+.test-percent {
+    margin-top: 30px;
+}
+
+.test-percent h3 {
+    margin-bottom: 0px
+}
+
+.line-bar-back {
+    background-color: rgb(242, 198, 170);
+    height: 33px;
+    width: 88%;
+    margin: 30px 2px 5px 10px;
+    position: absolute;
+}
+
+.line-bar-per {
+    background-color: rgb(193, 220, 177);
+    height: 33px;
+    margin: 30px 2px 5px 10px;
+    position: absolute;
+}
+
+.line-bar-frame {
+    position: relative
+}
+
+.line-bar-label-frame {
+    position: absolute;
+    margin: 25px 0px 0px 30px;
+}
+
+.percent {
+    text-align: center;
+    font-size: 10
+}
+
+.result-label-rejected {
+    text-align: center;
+    color: red
+}
+
+.result-label-complete {
+    text-align: center;
+    color: green
+}
+
+.result-label-accepted {
+    text-align: center;
+    color: orange
+}
+
+.label-align-center {
+    text-align: center;
+}
+
+.button-result {
+    background-color: rgb(108, 165, 212);
+    margin: auto;
+    display: block
+}
+
+.arrow-item-frame {
+    float: left
+}
+
+.label-test {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    width: 50%;
+}
+
+.example-appear {
+    opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.detail-frame {
+    display: none
+}

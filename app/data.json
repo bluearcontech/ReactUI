@@ -1,0 +1,148 @@
+[
+    {
+        "type": "build",
+        "id": "Terrow-R1-1235",
+        "owner": "",
+        "time": "",
+        "state": "pending",
+        "metrics" : {
+            "status": "pending"
+        },
+        "build" : {
+            "status": "pending"
+        },
+        "unittest": {
+            "status": "pending"
+        },
+        "functionaltest": {
+            "status": "pending"
+        }
+    },
+    {
+        "type": "fire",
+        "id": "432462",
+        "owner": "jtuck",
+        "time": "4/18/2014 12:12 PM",
+        "state": "running",
+        "metrics" : {
+            "status": "running"
+        },
+        "build" : {
+            "status": "pending"
+        },
+        "unittest": {
+            "status": "pending"
+        },
+        "functionaltest": {
+            "status": "pending"
+        }
+    },    
+    {
+        "type": "fire",
+        "id": "432461",
+        "owner": "samy",
+        "time": "4/18/2014 12:12 PM",
+        "state": "rejected",
+        "metrics" : {
+            "status": "rejected",
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build" : {
+            "status": "fail"
+        },
+        "unittest": {
+            "status": "accepted",
+            "testpass": 73,
+            "codecover": 76
+        },
+        "functionaltest": {
+            "status": "accepted",
+            "testpass": 68,
+            "codecover": 23
+        }
+    },
+    {
+        "type": "build",
+        "id": "Terrow-R1-1234",
+        "owner": "",
+        "time": "4/18/2014 12:12 PM",
+        "state": "completed",
+        "metrics" : {
+            "status": "success",
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build" : {
+            "status": "success"
+        },
+        "unittest": {
+            "status": "success",
+            "testpass": 73,
+            "codecover": 76
+        },
+        "functionaltest": {
+            "status": "success",
+            "testpass": 68,
+            "codecover": 23
+        }
+    },
+    {
+        "type": "fire",
+        "id": "432465",
+        "owner": "jack",
+        "time": "4/18/2014 12:12 PM",
+        "state": "rejected",
+        "metrics" : {
+            "status": "rejected",
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build" : {
+            "status": "pending"
+        },
+        "unittest": {
+            "status": "pending",
+            "testpass": 73,
+            "codecover": 76
+        },
+        "functionaltest": {
+            "status": "pending",
+            "testpass": 68,
+            "codecover": 23
+        }
+    },
+    {
+        "type": "fire",
+        "id": "432462",
+        "owner": "jack",
+        "time": "4/18/2014 12:12 PM",
+        "state": "accepted",
+        "metrics" : {
+            "status": "accepted",
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build" : {
+            "status": "accepted"
+        },
+        "unittest": {
+            "status": "accepted",
+            "testpass": 86,
+            "codecover": 76
+        },
+        "functionaltest": {
+            "status": "accepted",
+            "testpass": 93,
+            "codecover": 23
+        }
+    }
+]
