@@ -3,13 +3,11 @@ import { shallow } from 'enzyme'
 import expect from 'expect'
 
 // import RowtItem from 'App/components/row_components/RowItem' 
-// import RowCollapse from 'App/components/row_components/RowCollapse' 
 // import RowExpand from 'App/components/row_components/RowExpand' 
 
-import RowItem from '../../../../../app/components/row_components/RowItem'
-import RowCollapse from '../../../../../app/components/row_components/RowCollapse'
-import RowExpand from '../../../../../app/components/row_components/RowExpand'
-describe('<RowItem />', () => {
+import Row from '../../../../../app/components/row_components/Row'
+import RowDetail from '../../../../../app/components/row_components/RowDetail'
+describe('<Row />', () => {
     
     let props
     beforeEach(() => {
@@ -37,18 +35,9 @@ describe('<RowItem />', () => {
         }
     })
 
-    it('should render RowCollapse component', () => {
-        const wrapper = shallow(<RowItem {...props} selected={false} />)
-        expect(wrapper.find(RowCollapse).length).toBe(1);
+    it('should render RowDetail component', () => {
+        const wrapper = shallow(<Row {...props} selected={true} />)
+        expect(wrapper.find(RowDetail).length).toBe(1);
     });
 
-    it('should render RowExpand component', () => {
-        const wrapper = shallow(<RowItem {...props} selected={true} />)
-        expect(wrapper.find(RowExpand).length).toBe(1);
-    });
-
-    it('should render empty div', () => {
-        const wrapper = shallow(<RowItem {...props} selected={"invalid"} />)
-        expect(wrapper.find('div').length).toBe(1);
-    });
 })

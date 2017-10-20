@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import data from 'App/data.json'
 import 'App/scss/style.scss'
-import RowItem from 'App/components/row_components/RowItem'
+import Row from 'App/components/row_components/Row'
 import buildImage from 'App/public/build.png'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Home extends Component {
@@ -76,7 +76,7 @@ class Home extends Component {
                     {
                         this.state.list.map((item, index) => {
                             let uniqueKey = item.id + index
-                            return (<RowItem item={item} key={index} onClick={this.handleClick} uniqueKey={uniqueKey} selected={this.state.selectedId == uniqueKey ? true : false} />)
+                            return (<Row item={item} key={index} onClick={this.handleClick} uniqueKey={uniqueKey} selected={this.state.selectedId == uniqueKey ? true : false} />)
                         })
                     }
             </div>

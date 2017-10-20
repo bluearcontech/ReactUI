@@ -6,7 +6,7 @@ import firewallImage from '../../public/firewall.png'
 import ResultView from '../detail_components/ResultView'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import AnimateHeight from 'react-animate-height';
-class RowExpand extends Component {
+class RowDetail extends Component {
     constructor(props) {
         super(props)
 
@@ -75,4 +75,4 @@ class RowExpand extends Component {
     }
 }
 
-export default RowExpand
+export default RowDetail

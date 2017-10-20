@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import expect from 'expect'
-
 import ResultView from '../../../../../app/components/detail_components/ResultView'
 
 describe('<ResultView />', () => {

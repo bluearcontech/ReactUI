@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PieChart from 'react-simple-pie-chart'
 import Pie from '../PieChart/Pie'
 import { Line } from 'rc-progress';
 class PieChartFrame extends Component {

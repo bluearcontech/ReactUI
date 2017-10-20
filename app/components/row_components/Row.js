@@ -3,14 +3,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import RowCollapse from './RowCollapse'
-import RowExpand from './RowExpand'
+import RowDetail from './RowDetail'
 import '../../scss/style.scss'
 import buildImage from '../../public/build.png'
 import firewallImage from '../../public/firewall.png'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import AnimateHeight from 'react-animate-height';
-class RowItem extends Component {
+class Row extends Component {
 
     constructor(props) {
         super(props)
@@ -118,9 +117,9 @@ class RowItem extends Component {
         }
 
         return (
-            <RowExpand itemFontColor={itemFontColor} itemBack={itemBack} itemStyle={itemStyle} item={this.props.item} onClick={this.props.onClick} uniqueKey={uniqueKey} detail={selected} />
+            <RowDetail itemFontColor={itemFontColor} itemBack={itemBack} itemStyle={itemStyle} item={this.props.item} onClick={this.props.onClick} uniqueKey={uniqueKey} detail={selected} />
         )
     }
 }
 
-export default RowItem
+export default Row
