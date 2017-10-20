@@ -18,7 +18,7 @@ class RowItem extends Component {
 
     render() {
         const { selected, uniqueKey } = this.props
-        
+
         let layout = null
         let metricsImagePath, buildImagePath, utImagePath, ftImagePath
         let metricsFrameStyle, buildFrameStyle, utFrameStyle, ftFrameStyle
@@ -116,18 +116,9 @@ class RowItem extends Component {
             "ut": utlabelCol,
             'ft': ftLabelCol
         }
-        
-        if (selected == true) {
-            layout = <RowExpand itemFontColor={itemFontColor} itemStyle={itemStyle} item={this.props.item} onClick={this.props.onClick} uniqueKey={uniqueKey} detail={true} />
-        } else if (selected == false) {
-            layout = <RowCollapse itemBack={itemBack} itemStyle={itemStyle} item={this.props.item} onClick={this.props.onClick} uniqueKey={uniqueKey} detail={false} />
-        } else {
-            layout = ""
-        }
+
         return (
-            <div>
-                {layout}
-            </div>
+            <RowExpand itemFontColor={itemFontColor} itemBack={itemBack} itemStyle={itemStyle} item={this.props.item} onClick={this.props.onClick} uniqueKey={uniqueKey} detail={selected} />
         )
     }
 }

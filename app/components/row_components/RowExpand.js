@@ -13,7 +13,7 @@ class RowExpand extends Component {
     }
 
     render() {
-        const { itemFontColor, uniqueKey, item, itemStyle, detail } = this.props
+        const { itemFontColor, uniqueKey, item, itemStyle, itemBack, detail } = this.props
         let labelColor
         if (item.state == 'accepted' || item.state == 'completed') {
             labelColor = 'label-color-green'
@@ -24,22 +24,42 @@ class RowExpand extends Component {
         } else if (item.state == 'running') {
             labelColor = 'label-color-blue'
         }
+        var detailView = "detail-hidden"
+        if (detail == true) {
+            detailView = ""
+        }
         return (
             <ReactCSSTransitionGroup transitionName="example"
                 transitionAppear={true} transitionAppearTimeout={500}
                 transitionEnter={false} transitionLeave={false}>
+                
+                <div className={["row-collapse", item.state].join(' ')} data-id={uniqueKey} onClick={this.props.onClick}>
+                    {
+                        detail == true ?
+                            <div className="row-overview">
+                                <div className="cell-type"><img className="icon" src={item.type == 'fire' ? firewallImage : buildImage} /></div>
+                                <label className={["cell-name", labelColor].join(' ')}>{item.id}</label>
+                                <label className={["cell", labelColor].join(' ')}>{this.props.item.owner}</label>
+                                <label className={["cell", labelColor].join(' ')}>{this.props.item.time}</label>
+                                <label className={["cell", labelColor].join(' ')}>{this.props.item.state}</label>
+                            </div> :
+                            <div className="row-overview">
+                                <div className="cell-type"><img className="icon" src={item.type == 'fire' ? firewallImage : buildImage} /></div>
 
-                <div className={["row-expand", item.state].join(' ')} data-id={uniqueKey}>
-                    <div className="cell-type"><img className="icon" src={item.type == 'fire' ? firewallImage : buildImage} /></div>
-                    <label className={["cell-name", labelColor].join(' ')}>{item.id}</label>
-                    <label className={["cell", labelColor].join(' ')}>{this.props.item.owner}</label>
-                    <label className={["cell", labelColor].join(' ')}>{this.props.item.time}</label>
-                    <label className={["cell", labelColor].join(' ')}>{this.props.item.state}</label>
-                    <div className="cell"></div>
-                    <div className="cell"></div>
-                    <div className="cell"></div>
+                                <label className={["cell-name", labelColor].join(' ')}>{item.id}</label>
+                                <label className={["cell", labelColor].join(' ')}>{this.props.item.owner}</label>
+                                <label className={["cell", labelColor].join(' ')}>{this.props.item.time}</label>
+                                <label className={["cell", labelColor].join(' ')}>{this.props.item.state}</label>
 
-                    <div>
+                                <label className={["cell-state", itemBack.metricBack].join(' ')}></label>
+                                <label className={["cell-state", itemBack.buildBack].join(' ')}></label>
+                                <label className={["cell-state", itemBack.utBack].join(' ')}></label>
+                                <label className={["cell-state", itemBack.ftBack].join(' ')}></label>
+
+                            </div>
+                    }
+
+                    <div className={detailView}>
                         <ItemProcessFrame itemFontColor={itemFontColor} item={item} style={itemStyle.metricStyle} name="Metrics" />
                         <ItemProcessFrame itemFontColor={itemFontColor} item={item} style={itemStyle.buildStyle} name="Build" />
                         <ItemProcessFrame itemFontColor={itemFontColor} item={item} style={itemStyle.utStyle} name="Unit Test" />

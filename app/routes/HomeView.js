@@ -58,6 +58,7 @@ class Home extends Component {
     }
 
     render() {
+        console.log("HomeView123")
         return (
             <div className="container">
                 

@@ -56,7 +56,6 @@
     margin: 10px 10px 10px 10px;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
 }
 
 .row-expand {
@@ -98,26 +97,24 @@
 
 .cell {
     text-align: center;
-    display: inline-block;
     width: 13%;
     line-height: 50px;
+    overflow: auto
 }
 
 .cell-state {
-    display: inline-block;
     width: 5%;
     background-color: red;
     border: 2px solid;
     border-color: lightgrey;
-    margin: 5px 33px 0px 33px;
-    padding: 0px 10px 0px 10px;
+    margin: 5px 33px 5px 33px;
     height: 40px;
 }
 
 .cell-name {
-    display: inline-block;
     width: 110px;
     line-height: 50px;
+    overflow: auto
 }
 
 .cell-type {
@@ -196,23 +193,23 @@
 }
 
 .label-color-grey {
-    margin: 5px 0px 0px 5px;
-    color: lightgrey
+    color: lightgrey;
+    margin-bottom: 0px;
 }
 
 .label-color-blue {
-    margin: 5px 0px 0px 5px;
-    color: darkgreen
+    color: darkgreen;
+    margin-bottom: 0px
 }
 
 .label-color-red {
-    margin: 5px 0px 0px 5px;
-    color: red
+    color: red;
+    margin-bottom: 0px;
 }
 
 .label-color-green {
-    margin: 5px 0px 0px 5px;
-    color: green
+    color: green;
+    margin-bottom: 0px;
 }
 
 .arrow-item {
@@ -329,6 +326,10 @@
     transition: opacity 500ms ease-in;
 }
 
-.detail-frame {
+.detail-hidden {
     display: none
+}
+
+.row-overview {
+    height: 50px
 }
