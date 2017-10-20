@@ -12,9 +12,12 @@ import AnimateHeight from 'react-animate-height';
 class RowDetail extends Component {
     constructor(props) {
         super(props)
-
+        this.onClick = this.onClick.bind(this)
     }
 
+    onClick() {
+        console.log("button Clicked")
+    }
     render() {
         const { itemFontColor, uniqueKey, item, itemStyle, itemBack, detail } = this.props
         let labelColor
@@ -50,12 +53,12 @@ class RowDetail extends Component {
                             <div className="row-overview">
                                 <div className="cell-type"><img className="icon" src={item.type == 'fire' ? firewallImage : buildImage} /></div>
 
-                                <label className={["cell-name", labelColor].join(' ')}>{item.id}</label>
+                                <label className={["cell-name", labelColor].join(' ')} onClick={this.onClick}>{item.id}</label>
                                 <label className={["cell", labelColor].join(' ')}>{this.props.item.owner}</label>
                                 <label className={["cell", labelColor].join(' ')}>{this.props.item.time}</label>
                                 <label className={["cell", labelColor].join(' ')}>{this.props.item.state}</label>
 
-                                <a><label className={["cell-state", itemBack.metricBack].join(' ')}></label></a>
+                                <label className={["cell-state", itemBack.metricBack].join(' ')}></label>
                                 <label className={["cell-state", itemBack.buildBack].join(' ')}></label>
                                 <label className={["cell-state", itemBack.utBack].join(' ')}></label>
                                 <label className={["cell-state", itemBack.ftBack].join(' ')}></label>

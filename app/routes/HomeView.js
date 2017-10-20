@@ -42,9 +42,15 @@ class Home extends Component {
     }
 
     handleClick(event) {
-        event.preventDefault()
-        // Get selected row when click row
         console.log("click method")
+        event.preventDefault()
+        //if the button click, don't trigger row div click method
+        if(event.target.className.includes("cell-state")) {
+            console.log("button clicked")
+            return
+        }
+
+        // Get selected row when click row
         var id = event.currentTarget.attributes['data-id'].value
         if (this.state.selectedId != id) {
             this.setState({
@@ -54,7 +60,6 @@ class Home extends Component {
     }
 
     render() {
-        console.log("HomeView123")
         return (
             <div className="container">
                 

@@ -10,8 +10,12 @@ class ItemProcessFrame extends Component {
 
     constructor(props) {
         super(props)
+        this.onClick = this.onClick.bind(this)
     }
 
+    onClick() {
+        console.log("Item Frame Click")
+    }
     render() {
         const { style, name, itemFontColor, item } = this.props
         let fontColor, detailFrame
@@ -34,7 +38,7 @@ class ItemProcessFrame extends Component {
         } 
 
         return (
-            <div className={["status-frame", style].join(' ')}>
+            <div className={["status-frame", style].join(' ')} onClick={this.onClick}>
                 <div><label className={fontColor}>{name}</label></div>
                 {detailFrame}
             </div>

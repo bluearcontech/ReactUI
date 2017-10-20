@@ -19,6 +19,7 @@ class MetricsFrame extends Component {
                         fill="green"
                         strokeWidth={2}
                     />
+                    <label className="metric-label-top">{item.metrics.test}</label>
                 </div>
                 <div className="arrow-item">
                     <Arrow
@@ -30,6 +31,7 @@ class MetricsFrame extends Component {
                         fill="red"
                         strokeWidth={2}
                     />
+                    <label className="metric-label-top">{item.metrics.maintainability}</label>
                 </div>
                 <div className="label-test">Test</div>
                 <div className="label-test">Maintanability</div>
@@ -43,6 +45,7 @@ class MetricsFrame extends Component {
                         fill="yellow"
                         strokeWidth={2}
                     />
+                    <label className="metric-label-bottom">{item.metrics.security}</label>
                 </div>
                 <div className="arrow-item">
                     <Arrow
@@ -54,6 +57,7 @@ class MetricsFrame extends Component {
                         fill="yellow"
                         strokeWidth={2}
                     />
+                    <label className="metric-label-bottom">{item.metrics.workmanship}</label>
                 </div>
                 <div className="label-test">Security</div>
                 <div className="label-test">Workmanship</div>

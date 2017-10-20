@@ -25,7 +25,11 @@
         "time": "4/18/2014 12:12 PM",
         "state": "running",
         "metrics" : {
-            "status": "running"
+            "status": "running",
+            "test": 68,
+            "maintainability": 89,
+            "security": 48,
+            "workmanship": 57
         },
         "build" : {
             "status": "pending"
@@ -126,10 +130,10 @@
         "state": "accepted",
         "metrics" : {
             "status": "accepted",
-            "test": 64,
-            "maintainability": 53,
-            "security": 64,
-            "workmanship": 72
+            "test":89,
+            "maintainability": 36,
+            "security": 94,
+            "workmanship": 69
         },
         "build" : {
             "status": "accepted"
