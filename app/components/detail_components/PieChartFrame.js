@@ -48,9 +48,9 @@ class PieChartFrame extends Component {
                             stroke={'#fff'}
                         />
                     </div>
-                    <div className="test-percent">
-                        <h3>{tpValue}</h3>
-                        <font size="1">test passed</font>
+                    <div className="test-percent">                        
+                        <label className="tp-label">{tpValue}</label>
+                        <font size="1">test passed</font>                        
                     </div>
                     <div className="line-bar-frame">
                         <div className="line-bar-back">
@@ -60,7 +60,7 @@ class PieChartFrame extends Component {
                         
                         <div className="line-bar-label-frame">
                             <div className="percent"><strong>{ccValue}</strong></div>
-                            <div>Code Completed</div>
+                            <font>Code Completed</font>
                         </div>
                     </div>
                 </div>

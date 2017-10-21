@@ -10,6 +10,13 @@ describe('<MetricsFrame />', () => {
     beforeEach(() => {
         props = {
             item: {
+                "metrics": {
+                    "status": "accepted",
+                    "test": 89,
+                    "maintainability": 36,
+                    "security": 94,
+                    "workmanship": 69
+                },
                 "unittest": {
                     "status": "pending"
                 },
@@ -21,7 +28,7 @@ describe('<MetricsFrame />', () => {
     })
 
     it('should render 4 Arrow components', () => {
-        const wrapper = shallow(<MetricsFrame {...props}  />)
+        const wrapper = shallow(<MetricsFrame {...props} />)
         expect(wrapper.find('Arrow').length).toBe(4);
     });
 })

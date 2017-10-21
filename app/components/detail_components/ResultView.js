@@ -19,8 +19,8 @@ class ResultView extends Component {
             </div>
         } else if (item.state == 'rejected') {
             layout = <div>
-                <h4 className="label-align-center">Result</h4>
-                <div className="result-label-rejected">Change Rejected</div>
+                <label className="label-align-center">Result</label>
+                <label className="result-label-rejected">Change Rejected</label>
                 <h3 className="result-label-rejected">Metrics Reduction</h3>
                 <button className="button-result">Find Issue</button>
             </div>
