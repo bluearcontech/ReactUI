@@ -26,7 +26,7 @@ class Home extends Component {
         this.setState({
             list: list
         })
-        console.log("ajax Call request")
+        // get json data using ajax call
         $.ajax({
             url: './data.json',
             type: "GET",
@@ -36,13 +36,12 @@ class Home extends Component {
                 console.log(data)
             },
             error: function (error) {
-                console.log("error: " + error.status)
+                
             }
         })
     }
 
     handleClick(event) {
-        console.log("click method")
         event.preventDefault()
         //if the button click, don't trigger row div click method
         if(event.target.className.includes("cell-state")) {
@@ -62,8 +61,6 @@ class Home extends Component {
     render() {
         return (
             <div className="container">
-                
-                
                     <div className="header-label">
                         <label className="header-type">ChangeList/Build</label>
                         <label className="header-owner">Owner</label>
