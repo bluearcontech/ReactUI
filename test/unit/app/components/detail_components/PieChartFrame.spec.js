@@ -11,10 +11,10 @@ describe('<PieChartFrame />', () => {
         props = {
             item: {
                 "unittest": {
-                    "status": "pending"
+                    "status": "Pending"
                 },
                 "functionaltest": {
-                    "status": "accepted"
+                    "status": "Accepted"
                 }
             }
         }

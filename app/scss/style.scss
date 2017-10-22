@@ -205,22 +205,22 @@
     background: linear-gradient(to left, rgba(236, 182, 182, 0), rgba(0, 0, 255, 0.6));
 }
 
-.label-color-grey {
+.label-color-pending {
     color: lightgrey;
     margin-bottom: 0px;
 }
 
-.label-color-blue {
-    color: darkgreen;
+.label-color-running {
+    color: cornflowerblue;
     margin-bottom: 0px
 }
 
-.label-color-red {
+.label-color-rejected {
     color: red;
     margin-bottom: 0px;
 }
 
-.label-color-green {
+.label-color-complete {
     color: green;
     margin-bottom: 0px;
 }
@@ -356,13 +356,26 @@
     height: 50px
 }
 
-.metric-label-bottom {
+.metrics-label-status {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.label-pending {
+    color: lightgray
+}
+
+.label-running {
+    color: cornflowerblue
+}
+
+.metrics-label-bottom {
     position: absolute;
     left: 12px;
     bottom: 10px;
 }
 
-.metric-label-top {
+.metrics-label-top {
     position: absolute;
     left: 12px;
     bottom: 10px;

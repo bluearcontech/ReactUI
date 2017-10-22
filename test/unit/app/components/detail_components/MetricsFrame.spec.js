@@ -11,17 +11,17 @@ describe('<MetricsFrame />', () => {
         props = {
             item: {
                 "metrics": {
-                    "status": "accepted",
+                    "status": "Accepted",
                     "test": 89,
                     "maintainability": 36,
                     "security": 94,
                     "workmanship": 69
                 },
                 "unittest": {
-                    "status": "pending"
+                    "status": "Pending"
                 },
                 "functionaltest": {
-                    "status": "accepted"
+                    "status": "Accepted"
                 }
             }
         }

@@ -4,19 +4,19 @@
         "id": "Terrow-R1-1235",
         "owner": "",
         "time": "",
-        "state": "pending",
+        "state": "Pending",
         "metrics" : {
-            "status": "pending",
+            "status": "Pending",
             "date": "09:40 4/2/2015"
         },
         "build" : {
-            "status": "pending"
+            "status": "Pending"
         },
         "unittest": {
-            "status": "pending"
+            "status": "Pending"
         },
         "functionaltest": {
-            "status": "pending"
+            "status": "Pending"
         }
     },
     {
@@ -24,19 +24,19 @@
         "id": "432462",
         "owner": "jtuck",
         "time": "4/18/2014 12:12 PM",
-        "state": "running",
+        "state": "Running",
         "metrics" : {
-            "status": "running"            
+            "status": "Running"            
         },
         "build" : {
-            "status": "pending",
+            "status": "Pending",
             "date": "09:40 4/2/2015"
         },
         "unittest": {
-            "status": "pending"
+            "status": "Pending"
         },
         "functionaltest": {
-            "status": "pending"
+            "status": "Pending"
         }
     },    
     {
@@ -44,25 +44,25 @@
         "id": "432461",
         "owner": "samy",
         "time": "4/18/2014 12:12 PM",
-        "state": "rejected",
+        "state": "Rejected",
         "metrics" : {
-            "status": "rejected",
+            "status": "Rejected",
             "test": 64,
             "maintainability": 53,
             "security": 64,
             "workmanship": 72
         },
         "build" : {
-            "status": "fail",
+            "status": "Fail",
             "date": "09:40 4/2/2015"
         },
         "unittest": {
-            "status": "accepted",
+            "status": "Accepted",
             "testpass": 73,
             "codecover": 84
         },
         "functionaltest": {
-            "status": "accepted",
+            "status": "Accepted",
             "testpass": 68,
             "codecover": 32
         }
@@ -72,25 +72,25 @@
         "id": "Terrow-R1-1234",
         "owner": "",
         "time": "4/18/2014 12:12 PM",
-        "state": "completed",
+        "state": "Completed",
         "metrics" : {
-            "status": "success",
+            "status": "Success",
             "test": 64,
             "maintainability": 53,
             "security": 64,
             "workmanship": 72
         },
         "build" : {
-            "status": "success",
+            "status": "Success",
             "date": "09:40 4/2/2015"
         },
         "unittest": {
-            "status": "success",
+            "status": "Success",
             "testpass": 73,
             "codecover": 59
         },
         "functionaltest": {
-            "status": "success",
+            "status": "Success",
             "testpass": 68,
             "codecover": 39
         }
@@ -100,24 +100,24 @@
         "id": "432465",
         "owner": "jack",
         "time": "4/18/2014 12:12 PM",
-        "state": "rejected",
+        "state": "Rejected",
         "metrics" : {
-            "status": "rejected",
+            "status": "Rejected",
             "test": 64,
             "maintainability": 53,
             "security": 64,
             "workmanship": 72
         },
         "build" : {
-            "status": "pending"
+            "status": "Pending"
         },
         "unittest": {
-            "status": "pending",
+            "status": "Pending",
             "testpass": 73,
             "codecover": 67
         },
         "functionaltest": {
-            "status": "pending",
+            "status": "Pending",
             "testpass": 68,
             "codecover": 38
         }
@@ -127,25 +127,25 @@
         "id": "432462",
         "owner": "jack",
         "time": "4/18/2014 12:12 PM",
-        "state": "accepted",
+        "state": "Accepted",
         "metrics" : {
-            "status": "accepted",
+            "status": "Accepted",
             "test":89,
             "maintainability": 36,
             "security": 94,
             "workmanship": 69
         },
         "build" : {
-            "status": "accepted",            
+            "status": "Accepted",            
             "date": "09:40 4/2/2015"
         },
         "unittest": {
-            "status": "accepted",
+            "status": "Accepted",
             "testpass": 86,
             "codecover": 89
         },
         "functionaltest": {
-            "status": "accepted",
+            "status": "Accepted",
             "testpass": 93,
             "codecover": 34
         }

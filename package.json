@@ -32,7 +32,6 @@
     "postcss-loader": "^1.2.2",
     "react": "^16.0.0",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-animate-height": "^0.10.5",
     "react-arrow": "^1.0.1",
     "react-bootstrap-table": "^4.0.6",
     "react-dom": "^16.0.0",

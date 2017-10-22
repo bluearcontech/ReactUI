@@ -9,7 +9,7 @@ describe('<ResultView />', () => {
     beforeEach(() => {
         props = {
             item: {
-                "state": "pending"
+                "state": "Pending"
             }
         }
     })

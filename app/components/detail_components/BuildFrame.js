@@ -7,22 +7,25 @@ class BuildFrame extends Component {
     }
 
     render() {
-        const { item } = this.props
+        const { style, itemFontColor, item } = this.props
         let buildPending = false
-        let buildLabel = "Build is not running yet"
-        if (item.state == "pending" || item.build.status == "pending" || item.build.status == "running") {
+        let buildStatusLabel = "Build is not running yet"
+        let buildLabelColor = "label-pending"
+        if (item.build.status == "Pending" || item.build.status == "Running") {
             buildPending = true
-            if(item.build.status == "running") {
-                buildLabel = "Build is running now"
+            if (item.build.status == "Running") {
+                buildStatusLabel = "Build is running now"
+                buildLabelColor = "label-running"
             }
         }
         return (
-            <div>
+            <div className={["status-frame", style].join(' ')} onClick={this.onClick}>
+                <div><label className={itemFontColor.fontColor}>{name}</label></div>
                 <div className="float-frame">
                     <img src={buildIcon} />
                     {
                         buildPending == true ?
-                            <label className="label-date">{buildLabel}</label>
+                            <label className={["label-date", buildLabelColor].join(' ')}>{buildStatusLabel}</label>
                             :
                             <label className="label-date">{item.build.date}</label>
                     }

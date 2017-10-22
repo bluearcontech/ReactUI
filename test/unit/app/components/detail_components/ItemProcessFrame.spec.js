@@ -11,15 +11,15 @@ describe('<ItemProcessFrame />', () => {
     beforeEach(() => {
         props = {
             item: {
-                "build": "rejected",
+                "build": "Rejected",
                 "metrics": {
-                    "status": "running"
+                    "status": "Running"
                 },
                 "unittest": {
-                    "status": "pending"
+                    "status": "Pending"
                 },
                 "functionaltest": {
-                    "status": "accepted"
+                    "status": "Accepted"
                 }
             },
             itemFontColor: {

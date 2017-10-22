@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class ResultView extends Component {
+class ResultFrame extends Component {
     constructor(props) {
         super(props)
     }
@@ -8,9 +8,9 @@ class ResultView extends Component {
     render() {
         let layout
         const { item } = this.props
-        if (item.state == 'pending' || item.state == 'running') {
+        if (item.state == 'Pending' || item.state == 'Running') {
             layout = ''
-        } else if (item.state == 'accepted') {
+        } else if (item.state == 'Accepted') {
             layout = <div>
                 <h4 className="label-align-center">Result</h4>
                 <div className="result-label-accepted">Change Accepted</div>
@@ -19,14 +19,14 @@ class ResultView extends Component {
                     <span className="glyphicon glyphicon-search"></span>
                     Merged Build</button>
             </div>
-        } else if (item.state == 'rejected') {
+        } else if (item.state == 'Rejected') {
             layout = <div>
                 <label className="label-align-center">Result</label>
                 <label className="result-label-rejected">Change Rejected</label>
                 <h3 className="result-label-rejected">Metrics Reduction</h3>
                 <button className="button-result">Find Issue</button>
             </div>
-        } else if (item.state == 'completed') {
+        } else if (item.state == 'Completed') {
             layout = <div>
                 <h4 className="label-align-center">Result</h4>
                 <h3 className="result-label-complete">Complete</h3>
@@ -47,4 +47,4 @@ class ResultView extends Component {
     }
 }
 
-export default ResultView
+export default ResultFrame

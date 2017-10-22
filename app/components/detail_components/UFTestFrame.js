@@ -4,7 +4,7 @@ class UFTestFrame extends Component {
 
     constructor(props) {
         super(props)
-        
+
     }
 
     componentDidMount() {
@@ -14,17 +14,27 @@ class UFTestFrame extends Component {
     }
 
     render() {
-        const { item, unit } = this.props
+        const { style, itemFontColor, item, unit } = this.props
         let tpValue, ccValue, ccbackValue
         let renderLayout = false
-        if (unit == true && item.unittest.status != "pending") {
-            renderLayout = true
-            tpValue = item.unittest.testpass
-            ccValue = item.unittest.codecover
-        } else if (unit == false && item.functionaltest.status != "pending") {
-            renderLayout = true
-            tpValue = item.functionaltest.testpass
-            ccValue = item.functionaltest.codecover
+        let fontColor, frameName
+        if (unit == true) {
+            fontColor = itemFontColor.ut
+            frameName = "Unit Test"
+            if (item.unittest.status != "Pending") {
+                renderLayout = true
+                tpValue = item.unittest.testpass
+                ccValue = item.unittest.codecover
+            }
+
+        } else if (unit == false) {
+            fontColor = itemFontColor.ft
+            frameName = "Functional Test"
+            if (item.functionaltest.status != "Pending") {
+                renderLayout = true
+                tpValue = item.functionaltest.testpass
+                ccValue = item.functionaltest.codecover
+            }
         }
         tpValue = tpValue + '%'
         ccbackValue = ccValue * 0.88 + '%'
@@ -47,16 +57,16 @@ class UFTestFrame extends Component {
                             stroke={'#fff'}
                         />
                     </div>
-                    <div className="test-percent">                        
+                    <div className="test-percent">
                         <label className="tp-label">{tpValue}</label>
-                        <font size="1">test passed</font>                        
+                        <font size="1">test passed</font>
                     </div>
                     <div className="line-bar-frame">
                         <div className="line-bar-back">
                         </div>
                         <div className="line-bar-per" style={{ width: ccbackValue }}>
                         </div>
-                        
+
                         <div className="line-bar-label-frame">
                             <div className="percent"><strong>{ccValue}</strong></div>
                             <font>Code Completed</font>
@@ -67,7 +77,10 @@ class UFTestFrame extends Component {
             <div></div>
         }
         return (
-            <div>{layout}</div>
+            <div className={["status-frame", style].join(' ')} onClick={this.onClick}>
+                <div><label className={fontColor}>{frameName}</label></div>
+                {layout}
+            </div>
         )
     }
 }

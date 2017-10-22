@@ -16,18 +16,18 @@ describe('<RowDetail />', () => {
                 "id": "Terrow-R1-1235",
                 "owner": "",
                 "time": "",
-                "state": "pending",
+                "state": "Pending",
                 "metrics": {
-                    "status": "pending"
+                    "status": "Pending"
                 },
                 "build": {
-                    "status": "pending"
+                    "status": "Pending"
                 },
                 "unittest": {
-                    "status": "pending"
+                    "status": "Pending"
                 },
                 "functionaltest": {
-                    "status": "pending"
+                    "status": "Pending"
                 }
             },
             itemBack: {
