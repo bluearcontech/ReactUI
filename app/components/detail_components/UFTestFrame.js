@@ -17,7 +17,7 @@ class UFTestFrame extends Component {
         const { style, itemFontColor, item, unit } = this.props
         let tpValue, ccValue, ccbackValue
         let renderLayout = false
-        let fontColor, frameName
+        let fontColor, frameName, testLabel
         if (unit == true) {
             fontColor = itemFontColor.ut
             frameName = "Unit Test"
@@ -25,8 +25,9 @@ class UFTestFrame extends Component {
                 renderLayout = true
                 tpValue = item.unittest.testpass
                 ccValue = item.unittest.codecover
+            } else {
+                testLabel = "Unit Test is not running yet."
             }
-
         } else if (unit == false) {
             fontColor = itemFontColor.ft
             frameName = "Functional Test"
@@ -34,6 +35,8 @@ class UFTestFrame extends Component {
                 renderLayout = true
                 tpValue = item.functionaltest.testpass
                 ccValue = item.functionaltest.codecover
+            } else {
+                testLabel = "Functional Test is not running yet."
             }
         }
         tpValue = tpValue + '%'
@@ -74,7 +77,10 @@ class UFTestFrame extends Component {
                     </div>
                 </div>
         } else {
-            <div></div>
+            layout =
+                <div className="chart-frame">
+                    <label className={["frame-label-status", "label-pending"].join(' ')}>{testLabel}</label>
+                </div>
         }
         return (
             <div className={["status-frame", style].join(' ')} onClick={this.onClick}>

@@ -89,7 +89,7 @@ class MetricsFrame extends Component {
                         </div>
                         :
                         <div className="float-frame">
-                            <label className={["metrics-label-status", metricsLabelColor].join(' ')}>{metricsStatusLabel}</label>
+                            <label className={["frame-label-status", metricsLabelColor].join(' ')}>{metricsStatusLabel}</label>
                         </div>
                 }
 

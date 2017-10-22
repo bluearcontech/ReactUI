@@ -20,6 +20,30 @@
         }
     },
     {
+        "type": "build",
+        "id": "Terrow-R1-1235",
+        "owner": "",
+        "time": "",
+        "state": "Running",
+        "metrics" : {
+            "status": "Accepted",
+            "date": "09:40 4/2/2015",
+            "test":89,
+            "maintainability": 36,
+            "security": 94,
+            "workmanship": 69
+        },
+        "build" : {
+            "status": "Running" 
+        },
+        "unittest": {
+            "status": "Pending"
+        },
+        "functionaltest": {
+            "status": "Pending"
+        }
+    },
+    {
         "type": "fire",
         "id": "432462",
         "owner": "jtuck",

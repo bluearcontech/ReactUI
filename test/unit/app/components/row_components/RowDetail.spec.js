@@ -4,8 +4,7 @@ import expect from 'expect'
 
 import Row from '../../../../../app/components/row_components/Row'
 import RowDetail from '../../../../../app/components/row_components/RowDetail'
-import ItemProcessFrame from '../../../../../app/components/detail_components/ItemProcessFrame'
-import ResultView from '../../../../../app/components/detail_components/ResultView'
+import ResultFrame from '../../../../../app/components/detail_components/ResultFrame'
 describe('<RowDetail />', () => {
 
     let props
@@ -46,14 +45,9 @@ describe('<RowDetail />', () => {
         }
     })
 
-    it('should render 4  ItemProcessFrame component', () => {
+    it('should render 1 ResultFrame component', () => {
         const wrapper = shallow(<RowDetail {...props} />)
-        expect(wrapper.find(ItemProcessFrame).length).toBe(4);
-    });
-
-    it('should render 1 ResultView component', () => {
-        const wrapper = shallow(<RowDetail {...props} />)
-        expect(wrapper.find(ResultView).length).toBe(1);
+        expect(wrapper.find(ResultFrame).length).toBe(1);
     });
 
 })
