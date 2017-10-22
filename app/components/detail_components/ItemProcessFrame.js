@@ -2,9 +2,9 @@
 
 import React, { Component } from 'react'
 import Arrow from 'react-arrow'
-import PieChart from 'react-simple-pie-chart'
-import PieChartFrame from './PieChartFrame'
+import UFTestFrame from './UFTestFrame'
 import MetricsFrame from './MetricsFrame'
+import BuildFrame from './BuildFrame'
 import buildIcon from '../../public/build-icon.png'
 class ItemProcessFrame extends Component {
 
@@ -24,17 +24,13 @@ class ItemProcessFrame extends Component {
             detailFrame = <MetricsFrame item={item}/>
         } else if (name == "Build") {
             fontColor = itemFontColor.build
-            if(item.build.status == 'pending' || item.build.status == 'running') {
-                detailFrame = null
-            } else {
-                detailFrame = <div className="float-frame"><img src={buildIcon} /></div>
-            }           
+            detailFrame = <BuildFrame item={item} />         
         } else if (name == "Unit Test") {
             fontColor = itemFontColor.ut
-            detailFrame = <PieChartFrame item={item} unit={true}/>
+            detailFrame = <UFTestFrame item={item} unit={true}/>
         } else if (name == "Functional Test") {
             fontColor = itemFontColor.ft
-            detailFrame = <PieChartFrame item={item} unit={false}/>
+            detailFrame = <UFTestFrame item={item} unit={false}/>
         } 
 
         return (

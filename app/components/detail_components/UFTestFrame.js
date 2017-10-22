@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Pie from '../PieChart/Pie'
-import { Line } from 'rc-progress';
-class PieChartFrame extends Component {
+class UFTestFrame extends Component {
 
     constructor(props) {
         super(props)
@@ -73,4 +72,4 @@ class PieChartFrame extends Component {
     }
 }
 
-export default PieChartFrame
+export default UFTestFrame

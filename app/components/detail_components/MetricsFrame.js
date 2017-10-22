@@ -7,6 +7,12 @@ class MetricsFrame extends Component {
 
     render() {
         const { item } = this.props
+        let maintainabilityColor 
+        if(item.metrics.status == "rejected") {
+            maintainabilityColor = "red"
+        } else {
+            maintainabilityColor = "green"
+        }
         return (
             <div className="float-frame">
                 <div className="arrow-item">
@@ -21,14 +27,14 @@ class MetricsFrame extends Component {
                     />
                     <label className="metric-label-top">{item.metrics.test}</label>
                 </div>
-                <div className="arrow-item">
+                <div className="arrow-item">                    
                     <Arrow
                         direction="down"
                         shaftWidth={20}
                         shaftLength={20}
                         headWidth={40}
                         headLength={25}
-                        fill="red"
+                        fill={maintainabilityColor}
                         strokeWidth={2}
                     />
                     <label className="metric-label-top">{item.metrics.maintainability}</label>

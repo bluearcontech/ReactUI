@@ -319,8 +319,10 @@
 
 .button-result {
     background-color: rgb(108, 165, 212);
+    width: 130px;
     margin: auto;
-    display: block
+    display: block;
+    color: white
 }
 
 .arrow-item-frame {
@@ -367,6 +369,33 @@
     color: white
 }
 
+
+.button-result-deploy {
+    padding: 5px 15px 5px 15px;
+    background-color: cornflowerblue;
+    color: white
+}
+
+.units {
+    width: 100px;
+    height: 25px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-color: green;
+    margin-left: 20px;
+    color: cadetblue
+}
+
+.label-to {
+    margin-left: 20px
+}
+
+.label-date {
+    display:block;
+    text-align: center;
+    margin-top: 20px 
+}
+
 @media (max-width: 1080px) {
     .cell-state {
         width: 5%;
@@ -389,10 +418,9 @@
         position: relative;
         margin: 0px 14px 5px 14px;
     }
-
     .arrow-item svg {
         width: 30px;
-        height:30px
+        height: 30px
     }
     .float-frame img {
         max-width: 100%;
@@ -423,11 +451,10 @@
         margin: 0px 0px 0px 30px;
         font {
             font-size: 10px
-        }        
+        }
     }
     .percent {
         margin-top: 0px;
-        
     }
     .result-frame {
         width: 150px;
