@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import expect from 'expect'
-import PieChart from 'react-simple-pie-chart'
 import Arrow from 'react-arrow'
 import MetricsFrame from '../../../../../app/components/detail_components/MetricsFrame'
 

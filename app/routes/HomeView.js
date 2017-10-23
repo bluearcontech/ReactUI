@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import data from 'App/data.json'
 import 'App/scss/style.scss'
-import Row from 'App/components/row_components/Row'
+import Row from 'App/components/row_component/Row'
 import buildImage from 'App/public/build.png'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Home extends Component {

@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import expect from 'expect'
-import PieChart from 'react-simple-pie-chart'
 import Arrow from 'react-arrow'
 import UFTestFrame from '../../../../../app/components/detail_components/UFTestFrame'
 import Pie from '../../../../../app/components/piechart/Pie'
@@ -9,14 +8,7 @@ describe('<UFTestFrame />', () => {
 
     let props
     beforeEach(() => {
-        props = {
-            item: {                
-                "unittest": {
-                    "status": "Accepted",
-                    "testpass": 73,
-                    "codecover": 84
-                }
-            },
+        props = {            
             itemFontColor: {
                 'metrics': "label-color-pending",
                 "build": 'label-color-running',
@@ -27,7 +19,26 @@ describe('<UFTestFrame />', () => {
     })
 
     it('should render Pie component if the unittest status is accepted', () => {
-        const wrapper = shallow(<UFTestFrame {...props} unit={true}/>)
+        const item = {
+            "unittest": {
+                "status": "Accepted",
+                "testpass": 73,
+                "codecover": 84
+            }
+        }
+        const wrapper = shallow(<UFTestFrame {...props} unit={true} item={item} />)
+        expect(wrapper.find(Pie).length).toBe(1);
+    });
+
+    it('should render Pie component if the functional status is accepted', () => {
+        const item = {
+            "functionaltest": {
+                "status": "Accepted",
+                "testpass": 73,
+                "codecover": 84
+            }
+        }
+        const wrapper = shallow(<UFTestFrame {...props} unit={false} item={item} />)
         expect(wrapper.find(Pie).length).toBe(1);
     });
 
