@@ -322,7 +322,9 @@
     width: 130px;
     margin: auto;
     display: block;
-    color: white
+    color: white;
+    padding-bottom: 10px;
+    padding: 5px 0px 5px 0px;
 }
 
 .arrow-item-frame {
@@ -382,6 +384,9 @@
     color: white
 }
 
+.step-label {
+    margin: 5px 0px 0px 5px;
+}
 
 .button-result-deploy {
     padding: 5px 15px 5px 15px;

@@ -30,7 +30,7 @@ class MetricsFrame extends Component {
         }
         return (
             <div className={["status-frame", style].join(' ')} onClick={this.onClick}>
-                <div><label className={itemFontColor.metrics}>Metrics</label></div>
+                <div><label className={[itemFontColor.metrics, "step-label"].join(' ')}>Metrics</label></div>
                 {
                     showArrow == true ?
                         <div className="float-frame">
@@ -92,7 +92,6 @@ class MetricsFrame extends Component {
                             <label className={["frame-label-status", metricsLabelColor].join(' ')}>{metricsStatusLabel}</label>
                         </div>
                 }
-
             </div>
         )
     }

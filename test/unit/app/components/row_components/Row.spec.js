@@ -3,9 +3,10 @@ import { shallow } from 'enzyme'
 import expect from 'expect'
 
 import Row from '../../../../../app/components/row_components/Row'
-import RowDetail from '../../../../../app/components/row_components/RowDetail'
 import ResultFrame from '../../../../../app/components/detail_components/ResultFrame'
-describe('<RowDetail />', () => {
+import MetricsFrame from '../../../../../app/components/detail_components/MetricsFrame'
+
+describe('<Row />', () => {
 
     let props
     beforeEach(() => {
@@ -46,8 +47,8 @@ describe('<RowDetail />', () => {
     })
 
     it('should render 1 ResultFrame component', () => {
-        const wrapper = shallow(<RowDetail {...props} />)
-        expect(wrapper.find(ResultFrame).length).toBe(1);
+        const wrapper = shallow(<Row {...props} selected={false} />)
+        expect(wrapper.find(MetricsFrame).length).toBe(1);
     });
 
 })

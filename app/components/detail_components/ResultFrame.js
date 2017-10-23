@@ -12,7 +12,7 @@ class ResultFrame extends Component {
             layout = ''
         } else if (item.state == 'Accepted') {
             layout = <div>
-                <h4 className="label-align-center">Result</h4>
+                <h4 className="label-align-center">Result:</h4>
                 <div className="result-label-accepted">Change Accepted</div>
                 <h3 className="result-label-accepted">Auto-Merged</h3>
                 <button className="button-result">
@@ -21,14 +21,14 @@ class ResultFrame extends Component {
             </div>
         } else if (item.state == 'Rejected') {
             layout = <div>
-                <label className="label-align-center">Result</label>
+                <label className="label-align-center">Result:</label>
                 <label className="result-label-rejected">Change Rejected</label>
                 <h3 className="result-label-rejected">Metrics Reduction</h3>
                 <button className="button-result">Find Issue</button>
             </div>
         } else if (item.state == 'Completed') {
             layout = <div>
-                <h4 className="label-align-center">Result</h4>
+                <h4 className="label-align-center">Result:</h4>
                 <h3 className="result-label-complete">Complete</h3>
                 <button className="button-result-deploy">Deploy</button>
                 <label className="label-to">to:</label>

@@ -20,7 +20,7 @@ class BuildFrame extends Component {
         }
         return (
             <div className={["status-frame", style].join(' ')} onClick={this.onClick}>
-                <div><label className={itemFontColor.fontColor}>{name}</label></div>
+                <div><label className={[itemFontColor.fontColor, "step-label"].join(' ')}>{name}</label></div>
                 <div className="float-frame">
                     <img src={buildIcon} />
                     {

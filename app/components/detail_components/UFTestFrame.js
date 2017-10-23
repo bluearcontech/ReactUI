@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Pie from '../PieChart/Pie'
+import Pie from '../piechart/Pie'
 class UFTestFrame extends Component {
 
     constructor(props) {
@@ -18,10 +18,11 @@ class UFTestFrame extends Component {
         let tpValue, ccValue, ccbackValue
         let renderLayout = false
         let fontColor, frameName, testLabel
+        
         if (unit == true) {
             fontColor = itemFontColor.ut
             frameName = "Unit Test"
-            if (item.unittest.status != "Pending") {
+            if (item.unittest.status != "Pending") {    
                 renderLayout = true
                 tpValue = item.unittest.testpass
                 ccValue = item.unittest.codecover
@@ -61,7 +62,7 @@ class UFTestFrame extends Component {
                         />
                     </div>
                     <div className="test-percent">
-                        <label className="tp-label">{tpValue}</label>
+                        <label className={["tp-label", fontColor].join(' ')}>{tpValue}</label>
                         <font size="1">test passed</font>
                     </div>
                     <div className="line-bar-frame">
@@ -84,7 +85,7 @@ class UFTestFrame extends Component {
         }
         return (
             <div className={["status-frame", style].join(' ')} onClick={this.onClick}>
-                <div><label className={fontColor}>{frameName}</label></div>
+                <div><label className={[fontColor, "step-label"].join(' ')}>{frameName}</label></div>
                 {layout}
             </div>
         )
